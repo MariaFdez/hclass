@@ -1,0 +1,10 @@
+Package: hclass
+Title: Classification with Machine Learning Methods
+Version: 0.0.0.9000
+Author: María Fernández <maria.fernandez@barcelonagse.eu>
+Maintainer: María Fernández <maria.fernandez@barcelonagse.eu>
+Description: Library with essential machine learning classifiers, such as KNN method or discriminant function.
+License: see LICENCE
+Date: 2015-02-13
+Depends: R (>= 3.1.1)
+BuildKeepEmpty: TRUE
