@@ -19,7 +19,7 @@
 #' inputsTrain  <- matrix(rnorm(200), ncol=2)
 #' classesTrain <- c(rep(0, 50), rep(1, 50))
 #' # get the kNN predictions for the test set
-#' kNN_classifier(inputsTest, classesTrain, inputsTrain, k=15, obj="predict")
+#' KNN.k(inputsTest, classesTrain, inputsTrain, k=15, obj="predict")
 
 
 #Creating the function that trains or predicts the labels
