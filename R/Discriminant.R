@@ -1,16 +1,14 @@
 # ----------------------------------------------------------------------
-# Discriminant function
+# Graph function of the boundries in Knn method
 # ----------------------------------------------------------------------
-#' Discriminant
+#' Graph.KNN
 #' 
 #' Find the Discriminant Function that separates three different categories.
 #'
-#' @param X A data frame or a matrix where rows are observations and columns are features. If \code{type} is "train" this is training dataset, and if it is "predict" it is test dataset.
-#' @param Y A vector with labels for each row in \code{data} if \code{type} is "train", and with labels for each row in \code{memory} if \code{type} is "predict".
-#' @param RealData A data frame or a matrix where rows are observations and columns are features. If \code{type} is "train" this argument is not needed, and if it is "predict" it is a training dataset.
+#' @param X A data frame or a matrix where rows are observations and columns are features. 
+#' @param Y A vector with labels for each row in \code{data}.
 #' @param k Number of neighbors that the classifier should use. It has to be an odd number.
-#' @param obj Whether the goal is to train the classifier or predict classes of new observations based on past ones. The value can be either "train" or "predict".
-#' @return A list with following elements: predictedClasses, accuracy and errorCount.
+#' @return A graph that plots the boundries and how the categories are delimited.
 #' @export
 #' @import assertthat 
 #' @import hclass
@@ -24,7 +22,7 @@
 
 
 
-test<- function(X,Y,k,points){
+Graph.KNN<- function(X,Y,k){
   #take the categories we are working with
   realcategories<-unique(Y)
   realcategories<-as.character(realcategories)
@@ -33,7 +31,7 @@ test<- function(X,Y,k,points){
   realcolnames<-colnames(X)
   
   #creating the grid 
-  xlen <- ylen <- points
+  xlen <- ylen <- 100
   X1<-seq(min(X[,1]),max(X[,1]),len=xlen)
   X2<-seq(min(X[,2]),max(X[,2]),len=ylen)
   data<-matrix(0,(xlen*ylen),2)
@@ -103,6 +101,5 @@ ggplot()+
   xlab("Weight") +
   ylab("Height")
 }
-
 
 
