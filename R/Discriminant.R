@@ -23,10 +23,6 @@
 #' kNN_classifier(inputsTest, classesTrain, inputsTrain, k=15, obj="predict")
 
 
-X<-animalsDf[,1:2]
-Y<-animalsDf[,3]
-points<-100
-k<-5
 
 test<- function(X,Y,k,points){
   #take the categories we are working with
