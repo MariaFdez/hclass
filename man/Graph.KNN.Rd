@@ -21,10 +21,11 @@ Find the Discriminant Function that separates three different categories.
 }
 \examples{
 # create artificial dataset
-inputsTest   <- matrix(rnorm(200), ncol=2)
-inputsTrain  <- matrix(rnorm(200), ncol=2)
-classesTrain <- c(rep(0, 50), rep(1, 50))
+x1 <-c(978783,1052488,1039495,1056795,1125545,1536011,1616461,1388507,1608121,1416574,1704919,2653310,2208399,1896304,1957401)
+x2<-c(12645844,12343453,4137266,12229065, 12554668,8856611,12137668,11545424,9253718,8863474,15145969,12793921,14593861,15161586,15785243)
+Y<-c("Cats","Cats","Cats","Cats","Cats","Dogs","Dogs","Dogs","Dogs","Dogs","Lions","Lions","Lions","Lions","Lions")
+X<-cbind(x1,x2)
 # get the kNN predictions for the test set
-kNN_classifier(inputsTest, classesTrain, inputsTrain, k=15, obj="predict")
+Graph.KNN(X=X,Y=Y,k=5)
 }
 
