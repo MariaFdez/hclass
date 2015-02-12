@@ -3,4 +3,3 @@
 export(Graph.KNN)
 export(KNN.k)
 import(assertthat)
-import(hclass)

@@ -11,7 +11,6 @@
 #' @return A graph that plots the boundries and how the categories are delimited.
 #' @export
 #' @import assertthat 
-#' @import hclass
 #' @examples
 #' # create artificial dataset
 #' inputsTest   <- matrix(rnorm(200), ncol=2)
